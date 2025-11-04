@@ -5,7 +5,7 @@
     "description": "A simple API to manage contacts",
     "version": "1.0.0"
   },
-  "host": "https://project1-qg70.onrender.com",
+  "host": "project1-qg70.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
