@@ -1,4 +1,4 @@
-const mongodb = require('../db/connect');
+const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = (req, res) => {
@@ -24,7 +24,8 @@ const getSingle = (req, res) => {
   mongodb
     .getDb()
     .db()
-    .collection('contacts').find({ _id: userId })
+    .collection('contacts')
+    .find({ _id: userId })
     .toArray((err, result) => {
       if (err) {
         res.status(400).json({ message: err });
